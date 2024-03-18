@@ -33,4 +33,138 @@ Erwartungen:
 
 = Unterschiede von C++ und C#
 
- 
+// ================================
+
+= Prozedurale Programmierung  // C -- for, if, Unterprogramme
+= Objekt-Orientierung         // C++ C#  Java Python
+= Generische Programmierung   // C++ - Templates
+= Funktionale Programmierung  // C++ - Ranges
+
+Objekt-Orientierung in C++
+
+Nicht identisch: Notation // Syntax 
+
+Was ist eine Klasse?
+
+= Bauplan für Daten und Aktivitäten eines Gegenstands
+
+Was ist ein Objekt == Instanz:
+
+= Konkrete Ausprägung der Klasse
+
+  realer Stundent // bestimmte Uhrzeit: 9.50.00  // 12.00.00  // 17.00.00
+
+
+Beispiel:
+
+  Temperatur: 9 Grad == float / int // Einzelwert
+
+  Student:
+     = Vorname
+     = Alter
+     = Wohnort
+     = schreibeKlausur
+     = Durchschnittsnote
+
+Uhrzeit:
+
+Daten
+     = Sekunde, Minute, Stunde
+
+Aktivität:
+
+     = nächsteSekunde
+     = Print // Ausgabe
+     = reset
+
+C++: 2 Dateien , um eine Klasse zu beschreiben.
+
+A) Header-Datei: Sog. Schnittstelle der Klasse
+
+  i)  Daten
+  ii) Methoden: Die Signatur der Methode (Name, Parameter, Rückgabetyp)
+                NICHT: Realisierung
+
+B) Implementierungs-Datei: Realisierung der Methoden
+
+
+Anwendung zu einer Klasse:
+
+C) Dritte Datei: Program.cpp
+
+
+
+
+
+
+
+
+Zur Konvention:
+
+In C++ stellt man den Variablen eines Objekts das Kürzel
+m_ voran: m steht für "Member"
+
+
+
+C#:  "Hohes C" ==> Verbesserung von C/C++
+
+Zeitachse:
+
+C++: Ab 1985
+
+C#:  Ab 1995
+
+
+C# hat manche Aspekte von C++ vereinfacht:
+
+C#:  Reference-based Language  ==> Alle Objekte liegen auf der Halde (Heap) 
+
+C++:  Value- and Reference-based Language
+
+==> Alle Objekte liegen auf dem Stack (Stapel) ODER auf der Halde (Heap) 
+
+Schreibweise: 
+
+ Time now;                    Objekte auf dem Stack
+
+ Time* now = new Time();      Objekte auf auf der Halde (Heap) 
+
+
+// ================================================
+// TESTEN
+
+Der Debugger // Bug Wanze  to debug entwanzen
+
+Tool: Führt das Programm kontrolliert aus.
+
+
+OO - Programmierung:
+
+Idiome / Paradigmen:
+
+Wünsche incl. deren Umsetzung,
+was in der Proz. Programmierung
+fehlt / schlecht ist.
+
+Schutz der Daten / Sinnhaftigkeit von Daten bzw. Werten (Stunde / 9999):
+
+Kapselsung von Daten:
+
+Wie kann man bei Kapselung auf die Daten zugreifen ???
+
+Mit Methoden.  setHour, setSecond  ===> "setter"
+
+
+// ============================================
+
+Wie kann ich ein Objekt "in einer Zeile" vorbelegen / initialisieren ???
+
+Wertzuweisung: eher nicht.
+
+Mit dem Aufruf einer Methode: Jepp
+
+Es handelt sich um spezielle Methoden: Sie konstruieren das Objekt:
+
+Konstruktoren
+
+
