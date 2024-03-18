@@ -1,0 +1,36 @@
+==============
+
+C++ Grundlagen
+
+Guten Morgen
+
+Peter Loos   // Du
+
+https://github.com/pelocpp
+
+Ablauf: Unterbrecht mich // Fragen, Fragen, ...
+
+
+==============
+
+Online-Seminar:
+
+2 Tools:
+= Visual Studio
+= Unterlagen: Github: 
+
+Erwartungen:
+
+= Überblick über C++
+= Muss demnächst in C++ Programme erstellen
+= Will, darf C++ Quellcode lesen / verstehen
+= Agenda
+= Was MUSS drin sein!  Was fehlt in der Agenda!
+= Was bringe ich mit?  C Python anderen Progr. Sprachen 
+= Systematik / roten Faden
+
+= C#
+
+= Unterschiede von C++ und C#
+
+ 
