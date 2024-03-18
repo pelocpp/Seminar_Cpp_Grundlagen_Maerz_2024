@@ -127,10 +127,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\Rectangle\Point.cpp" />
+    <ClCompile Include="..\Rectangle\Rectangle.cpp" />
+    <ClCompile Include="..\Rectangle\Rectangle_Main.cpp" />
     <ClCompile Include="Program.cpp" />
     <ClCompile Include="Time.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\Rectangle\Point.h" />
+    <ClInclude Include="..\Rectangle\Rectangle.h" />
     <ClInclude Include="Time.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
