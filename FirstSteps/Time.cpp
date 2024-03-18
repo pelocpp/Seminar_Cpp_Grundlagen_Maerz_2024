@@ -15,11 +15,22 @@
 
 
 // Default C'tor (Constructor)
-Time::Time()
+// 1. Variante: Klassisch
+//Time::Time()
+//{
+//    m_hours = 0;
+//    m_minutes = 0;
+//    m_seconds = 0;
+//}
+
+// 2. Variante: Mit Member Initializer List
+//Time::Time() : m_hours (0), m_minutes(0), m_seconds (0)
+//{}
+
+// 3. Variante: Mit Member Initializer List UND Verketten von Konstruktoren
+// Constructor Chaining
+Time::Time() : Time(0, 0, 0)
 {
-    m_hours = 0;
-    m_minutes = 0;
-    m_seconds = 0;
 }
 
 

@@ -17,7 +17,7 @@
 
 int main()
 {
-    Time now (11, 54, 9999);       // erstes Objekt
+    Time now (13, 38, 0);       // erstes Objekt
 
     // C#:  Time now = new Time();
     // C#:  Time now;  now ist in C# eine Referenz (Pointer)
@@ -47,7 +47,7 @@ int main()
     // now.m_hours = 0;
     now.setHours(0);
 
-    now.reset();
+    now.reset();  // 00:00:00
     now.print();
 
     Time pause;     // zweites Objekt
@@ -60,4 +60,19 @@ int main()
     pause.setSeconds(0);
 
     pause.print();
+}
+
+
+void test()
+{
+    // C#
+    // Time pause = new Time();
+
+    // C++: Ein Objekt vom Typ Time mit dem Def.-Konstruktor
+    Time pause(1, 2, 3);
+    pause.print();
+
+    // Modern C++:
+    Time pause2{};  // Standard-Konstruktor // NEUE Syntax // Ab C++ 11
+    pause2.print();
 }

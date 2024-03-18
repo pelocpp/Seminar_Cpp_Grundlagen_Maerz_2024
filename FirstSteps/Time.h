@@ -17,8 +17,8 @@ public:
   //  void setSekunden(int sekunden);
 
     // Constructor
-    Time();
-    Time(int hours, int seconds, int minutes);
+    Time();                                     // Ohne Parameter: Standard-Konstruktor
+    Time(int hours, int seconds, int minutes);  // user-defined c'tor
 
 
     // setter / getter

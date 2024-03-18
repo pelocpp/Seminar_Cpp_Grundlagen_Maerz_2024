@@ -168,3 +168,48 @@ Es handelt sich um spezielle Methoden: Sie konstruieren das Objekt:
 Konstruktoren
 
 
+Frage:
+Wozu gibt es die Member Initializer List ?
+
+==> Ist bei der Vererbung notwendig!
+
+==========================================
+
+Was ist
+
+    Time pause();
+
+in C++:
+
+Hmmm, pause ist per Definition eine Vorwärtsdeklaration
+
+ einer Funktion namens pause OHNE Parameter mit
+ Rückgabetyp eines Objekts vom Typ Time.
+
+============================================
+
+Recap:
+
+Methoden führen (im Regelfall) zu einer Änderung des Zustands (State) eines Objekts.
+
+================================================
+
+bool isSquare ();
+
+bool b;
+
+b = true;
+b = false;
+
+Schreiben Sie eine Methode center,
+die den Punkt im Zentrum des Rechtecks berechnet.
+
+class Point: 
+
+In der Klasse Rectangle:
+
+Point center ();
+
+Rectangle intersection () 
+
+Wenn es kein Schnittrechteck gibt: Rectangle (0, 0, 0, 0)
