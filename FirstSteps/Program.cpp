@@ -7,10 +7,13 @@ void pointer_and_references();
 void pointer_and_references_anwendung_01();
 void pointer_and_references_02();
 void exerciseRectangle();
+void testChar();
+void testZeichenketten();
+void testString();
 
 int main()
 {
-    exerciseRectangle();
+    testString();
     return 1;
 }
 

@@ -1,9 +1,48 @@
 #include "Rectangle.h"
 
+// Als globale Funktion:
+bool operator == (const Rectangle& left, const Rectangle& right) {
+
+    if (left.m_x != right.m_x) {
+        return false;
+    }
+    else if (left.m_y != right.m_y) {
+        return false;
+    }
+    else if (left.m_width != right.m_width) {
+        return false;
+    }
+    else if (left.m_height != right.m_height) {
+        return false;
+    }
+    else
+    {
+        return true;
+    }
+
+    //if (left.getX() != right.getX()) {
+    //    return false;
+    //}
+    //else if (left.getY() != right.getY()) {
+    //    return false;
+    //}
+    //else if (left.getWidth() != right.getWidth()) {
+    //    return false;
+    //}
+    //else if (left.getHeight() != right.getHeight()) {
+    //    return false;
+    //}
+    //else
+    //{
+    //    return true;
+    //}
+}
+
+
+
+
 static void test01_ctors()
 {
-    using namespace Rectangles;
-
     Rectangle rect1;
     rect1.print();
     Rectangle rect2(3, 3, 5, 5);
@@ -18,8 +57,6 @@ static void test01_ctors()
 
 static void test02_methods()
 {
-    using namespace Rectangles;
-
     Rectangle rect(3, 4, 9, 10);
     rect.print();
     std::cout << "Circumference: " << rect.circumference() << std::endl;
@@ -30,7 +67,6 @@ static void test02_methods()
 
 static void test03_center()
 {
-    using namespace Rectangles;
 
     Rectangle rect1(1, 3, 3, 1);
     rect1.print();
@@ -45,7 +81,6 @@ static void test03_center()
 
 static void test04_move()
 {
-    using namespace Rectangles;
 
     Rectangle rect(1, 1, 4, 5);
     rect.print();
@@ -55,7 +90,6 @@ static void test04_move()
 
 static void test05_intersection()
 {
-    using namespace Rectangles;
 
     Rectangle rect1(4, 8, 9, 5);
     Rectangle rect2(2, 10, 8, 6);
@@ -79,8 +113,6 @@ static void test05_intersection()
 
 static void test06_equals()
 {
-    using namespace Rectangles;
-
     Rectangle rect1(1, 1, 4, 5);
 
     Rectangle rect2(1, 1, 4, 5);
@@ -90,7 +122,13 @@ static void test06_equals()
     
     equals = rect1.equals(rect2);  // Objekt-Orientiert
 
-    equals = (rect1 == rect2);     // Operatorenschreibweise
+    equals = (rect1 == rect2);     // Operatorenschreibweise // Infix-Schreibweise
+
+    // Nur auf Grund des Verständnisses:
+    // equals = rect1.operator== (rect2);
+
+    // Nur auf Grund des Verständnisses:
+    // equals = operator== (rect1, rect2);
 
     if (rect1 == rect2) {
         std::cout << "Sind gleich" << std::endl;
@@ -104,8 +142,6 @@ static void test06_equals()
 
 void exerciseRectangle()
 {
-    using namespace Rectangles;
-
     test01_ctors();
     test02_methods();
     test03_center();

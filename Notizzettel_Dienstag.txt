@@ -130,22 +130,67 @@ Beispiel: * hat mehrere Stelligkeiten.
 
 Wie wird ein Operator überladen ???
 
-Ist wie eine Methode zu realisieren.
+Ist wie eine Methode der Klasse zu realisieren.
 
 Welchen Namen hat diese Methode:   operator ==
 
 Bemerkung:
 ==========
 
-Es gibt bzfl. der Methoden-Realisierung 2 Optionen:
+Es gibt bzgl. der Methoden-Realisierung 2 Optionen:
 
-A) In der Klasse selbst ===> Vorraussetzung: Muss Zugriff auf den Header haben.
+A) In der Klasse selbst ===> Voraussetzung: Muss Zugriff auf den Header haben.
 
 B) Außerhalb der Klasse ==> Dann, wenn der Header-File nicht geändert werden kann.
                             Könnte sich um eine externe Zulieferung handeln.
 
-13.00 Uhr.
+Wie sieht die Realisierung im Falle B) aus:
+
+Ist wie eine globale Funktion zu realisieren - mit dem Namen operator ==
+
+Die privaten Member stehen jetzt nicht zur Verfügung.
+
+Es steht ausschließlich die "öffentliche" (public) Schnittstelle zur Verfügung.
+
+Bemerkung: 
+Aber:
+
+In C++ gibt es eine Möglichkeit, den Zugriff in bestimmten Situationen
+für private Member zu ermöglichen.
+
+Wie: Man kann "Freundschaften" aussprechen :)
+
+Mal sollte mit 'friend' behutsam umgehen:
+Es wird jegliche 'private' außer Kraft gesetzt.
+
+=============================================================================
+
+Das Regelwerk der OO mit der Syntax von C++ abgehandelt.
+
+Wie sieht es in der Praxis aus:
+
+Bibliothek:   Zeichenketten
+
+Zeichenketten:  "ABCDEF"
+
+C ===> Datentyps: ???
+
+char-Array:
+
+Viele Probleme:
+
+void testZeichenketten()
+{
+   // C
+   const char* s = "ABCDE";
+   // Länge: Muss berechnet werden.
 
 
+   char feld[6] = { '1', '2', '3', '4', '5', '\0' };
+   std::cout << feld << std::endl;
+}
 
 
+========> Das schreit nach eine Klasse string !!!!
+
+std::string 

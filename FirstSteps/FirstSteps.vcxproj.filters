@@ -19,6 +19,9 @@
     <Filter Include="Source Files\References">
       <UniqueIdentifier>{946e3a4a-7610-41a8-8316-e981cf7abbf1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Zeichenketten">
+      <UniqueIdentifier>{63edaf4a-fa62-4560-9cab-65ee7a028fd6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Program.cpp">
@@ -41,6 +44,12 @@
     </ClCompile>
     <ClCompile Include="..\References_Pointers\References_Pointers_Main.cpp">
       <Filter>Source Files\References</Filter>
+    </ClCompile>
+    <ClCompile Include="Zeichen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Zeichenketten\Strings_Main.cpp">
+      <Filter>Source Files\Zeichenketten</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
