@@ -3,6 +3,16 @@
 
 #include "Time.h"
 
+void pointer_and_references();
+void pointer_and_references_anwendung_01();
+void pointer_and_references_02();
+
+int main()
+{
+    pointer_and_references_anwendung_01();
+    return 1;
+}
+
 
 //int main()
 //{
@@ -15,7 +25,7 @@
 //    return 123;
 //}
 
-int main()
+int main_time()
 {
     Time now (13, 38, 0);       // erstes Objekt
 
@@ -60,6 +70,8 @@ int main()
     pause.setSeconds(0);
 
     pause.print();
+
+    return 1;
 }
 
 

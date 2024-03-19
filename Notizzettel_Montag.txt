@@ -214,5 +214,36 @@ Rectangle intersection ()
 
 Wenn es kein Schnittrechteck gibt: Rectangle (0, 0, 0, 0)
 
-15:30
+=========================================================
 
+Zeiger (Pointer) und Referenzen (References)
+
+C: Zeiger (Pointer) 
+
+===>
+
+Zeiger (Pointer) gibt es auch in C++
+
+Aber:
+
+Es gibt in C++ einen zweiten Ansatz:
+
+Referenzen (References)   // das gibt es in C nicht.
+
+
+
+Bemerkung: C#   'ref' als auch 'out'
+
+// ==========================================
+
+a) Call-by-Value    ===> Auf dem Stapel wird eine Kopie abgelegt
+
+b) Call-by-Address  ===> Auf dem Stapel wird eine Adresse abgelegt
+
+// ==========================================
+
+Pointer: Sind trotz der Konkurrenz von Referenzen NOTWENDIG:
+
+Dynamischen Daten
+
+// ==========================================

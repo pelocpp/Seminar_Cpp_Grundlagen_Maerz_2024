@@ -79,7 +79,7 @@ namespace Rectangles {
         //m_y = m_y + y;
     }
 
-    bool Rectangle::equals(Rectangle other)  // Übergabe: Call-by-Value: Kopie
+    bool Rectangle::equals(Rectangle& other)  // Übergabe: Call-by-Referenz:
     {
         if (m_x != other.m_x) {
             return false;

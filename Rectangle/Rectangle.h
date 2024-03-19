@@ -42,7 +42,10 @@ namespace Rectangles {
         double area();
         bool isSquare();
         void moveTo(double, double);
-        bool equals(Rectangle other);
+
+        bool equals(Rectangle& other);
+
+        
         Point center();
         Rectangle intersection(Rectangle other);
         void print();

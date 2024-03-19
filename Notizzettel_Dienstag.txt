@@ -1,0 +1,51 @@
+==============
+
+C++ Grundlagen
+
+Guten Morgen
+
+Dienstag
+
+Peter Loos 
+
+https://github.com/pelocpp
+
+// ==========================================
+
+C/C++:
+
+Pointer:        C
+
+Referenzen:     C++
+
+Aber:           new / delete  ==> Pointer
+
+Kochrezept
+
+// ==========================================
+
+Unterprogrammaufrufmechanismus
+
+MC-Programmierung
+
+Stack Frame pro UP Call
+
+
+// ==========================================
+
+
+Regel: Immer darauf achten, dass nicht unbeabsichtigterweise
+eine (überflüssige) Kopie entsteht !!!!!!!!!!!!!!!
+
+
+// Gut - keine Kopie
+bool Rectangle::equals(Rectangle& other)  // Übergabe: Call-by-Referenz:
+
+// Schlecht - da wird eine Kopie angelegt
+bool Rectangle::equals(Rectangle other)  // Übergabe: Call-by-Value:
+
+Bemerkung:
+Es sein denn, man möchte wirklich an ein Unterprogramm eine Kopie übergeben.
+
+Frage: C#  ===> interface ICloneable :  Methode clone  ===>  Erstellt manuell eine Kopie
+

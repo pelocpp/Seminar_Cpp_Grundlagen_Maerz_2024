@@ -16,6 +16,9 @@
     <Filter Include="Source Files\Rectangles">
       <UniqueIdentifier>{1169d70a-4982-4d17-a632-6c9bce9a374d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\References">
+      <UniqueIdentifier>{946e3a4a-7610-41a8-8316-e981cf7abbf1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Program.cpp">
@@ -32,6 +35,12 @@
     </ClCompile>
     <ClCompile Include="..\Rectangle\Rectangle_Main.cpp">
       <Filter>Source Files\Rectangles</Filter>
+    </ClCompile>
+    <ClCompile Include="Pointer_and_References.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\References_Pointers\References_Pointers_Main.cpp">
+      <Filter>Source Files\References</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

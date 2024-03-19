@@ -130,7 +130,9 @@
     <ClCompile Include="..\Rectangle\Point.cpp" />
     <ClCompile Include="..\Rectangle\Rectangle.cpp" />
     <ClCompile Include="..\Rectangle\Rectangle_Main.cpp" />
+    <ClCompile Include="..\References_Pointers\References_Pointers_Main.cpp" />
     <ClCompile Include="Program.cpp" />
+    <ClCompile Include="Pointer_and_References.cpp" />
     <ClCompile Include="Time.cpp" />
   </ItemGroup>
   <ItemGroup>
