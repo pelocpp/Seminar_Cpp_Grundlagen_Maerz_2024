@@ -194,3 +194,4 @@ void testZeichenketten()
 ========> Das schreit nach eine Klasse string !!!!
 
 std::string 
+

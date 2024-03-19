@@ -9,6 +9,7 @@
 
 static bool isLeapYear(int year)
 {
+    //                                                2000
     return ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);
 }
 
@@ -68,13 +69,14 @@ static bool verifyDateFormat(const std::string& date)
         return false;
     }
 
-    int indices[]{ 0, 1, 3, 4, 6, 7, 8, 9 };
+    // OO: std::array
+    int indices[8]{ 0, 1, 3, 4, 6, 7, 8, 9 };
 
     for (int i = 0; i < 8; ++i) {
 
         int index = indices[i];
 
-        if (!std::isdigit(date[index])) {
+        if (! std::isdigit(date[index])) {
             return false;
         }
     }
@@ -84,7 +86,8 @@ static bool verifyDateFormat(const std::string& date)
 
 static std::string dateToWord(const std::string& date)
 {
-    static std::string months[]{
+    static std::string months[]
+    {
         "January", "February", "March", "April", "May", "June",
         "July", "August", "September", "October", "November", "December"
     };
@@ -98,7 +101,7 @@ static std::string dateToWord(const std::string& date)
     std::string sMonth = date.substr(3, 2);
     std::string sYear = date.substr(6, 4);
 
-    // convert month string to int
+    // convert month string to int  "23" / 23
     int day = std::stoi(sDay);
     int month = std::stoi(sMonth);
     int year = std::stoi(sYear);
@@ -114,11 +117,21 @@ static std::string dateToWord(const std::string& date)
         sDay = sDay[1];
     }
 
-    std::string word = sDay + ". " + label + " " + sYear;
-    return word;
+    // functional programming  // fluent programming style
+    std::string word1 = sDay
+        .append(". ")
+        .append(label)
+        .append(" ")
+        .append(sYear);
+
+    
+    std::string word2 = sDay + ". " + label + " " + sYear;
+
+
+    return word1;
 }
 
-static void testDateToWord()
+void testDateToWord()
 {
     // test 'verifyDateFormat'
     std::cout << std::boolalpha << verifyDateFormat("10.08.2000") << std::endl;

@@ -10,10 +10,11 @@ void exerciseRectangle();
 void testChar();
 void testZeichenketten();
 void testString();
+void testDateToWord();
 
 int main()
 {
-    testString();
+    testDateToWord();
     return 1;
 }
 
