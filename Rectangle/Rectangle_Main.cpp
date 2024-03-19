@@ -86,9 +86,15 @@ static void test06_equals()
     Rectangle rect2(1, 1, 4, 5);
 
 
-    bool equals = rect1.equals(rect2);  // Objekt-Orientiert
+    bool equals;
+    
+    equals = rect1.equals(rect2);  // Objekt-Orientiert
 
+    equals = (rect1 == rect2);     // Operatorenschreibweise
 
+    if (rect1 == rect2) {
+        std::cout << "Sind gleich" << std::endl;
+    }
 
     std::cout << equals << std::endl;
     rect2.setX(10);

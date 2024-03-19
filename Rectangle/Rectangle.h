@@ -25,10 +25,10 @@ namespace Rectangles {
         Rectangle(double x, double left, double width, double height);
 
         // getter/setter
-        double getX();
-        double getY();
-        double getWidth();
-        double getHeight();
+        double getX() const;
+        double getY() const;
+        double getWidth() const;
+        double getHeight() const;
 
         void setX(double x);
         void setY(double y);
@@ -36,19 +36,24 @@ namespace Rectangles {
         void setHeight(double height);
 
         // public interface // methods
-        double circumference();
+        double circumference() const;
+        double diagonal() const;
+        double area() const;
+        bool isSquare() const;
 
-        double diagonal();
-        double area();
-        bool isSquare();
-        void moveTo(double, double);
+        // Signatur einer Methode / Funktion
+        // Name der Methode, Rückgabetyp, Datentypen der Parameter
+        // NICHT: Etwaige Namen der Parameter
+        void moveTo(double x, double y);
 
-        bool equals(Rectangle& other);
+        bool equals(const Rectangle&) const;
 
-        
         Point center();
-        Rectangle intersection(Rectangle other);
+        Rectangle intersection(Rectangle);
         void print();
+
+        // operators
+        bool operator == (const Rectangle& other) const;
     };
 }
 

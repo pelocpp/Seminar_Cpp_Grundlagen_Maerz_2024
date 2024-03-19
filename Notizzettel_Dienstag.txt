@@ -49,3 +49,103 @@ Es sein denn, man möchte wirklich an ein Unterprogramm eine Kopie übergeben.
 
 Frage: C#  ===> interface ICloneable :  Methode clone  ===>  Erstellt manuell eine Kopie
 
+=======================================================
+
+
+Gleichheit zweier Rechtecke:
+
+bool Rectangle::equals(Rectangle& other);
+
+Will zwei Rechtecke auf Gleichheit überprüfen.
+
+Frage:
+
+Muss ich zu diesem Zweck eines der beiden Rechtecke verändern ???
+
+Nein !
+
+Ich muss nur lesend auf die Daten der beiden Rechtecke zugreifen können.
+
+
+a) Ich will performant programmieren:
+
+   ===> Übergabe von Referenzen an Stelle von Kopien
+
+b) Übergabe von Referenzen: Damit wird der Zugriff auf das Original-Objekt hergestellt.
+
+   ===> Deshalb gibt es zum Schutze des Original-Objekts das 'const' Schlüsselwort
+
+c) Gebrauch von const:
+
+   Der Compiler ( Code-Generator ) kann besser optimieren.
+
+Go-to-Action:
+
+Standdefinition eines Parameters/ Methode:
+
+// 90%
+bool equals(const Rectangle& other);   // wenn other nicht verändert wird
+
+// 10%
+bool equals(Rectangle other);          // wenn das Original geschützt wird
+                                       // Eine Kopie wird übergeben.
+
+=============================================================
+
+Überladen von Operatoren:
+=========================
+
+Lesbarkeit des Quellcodes:
+
+Rectangle rect1;
+Rectangle rect2;
+
+bool equals = rect1.equals(rect2);  // testet Gleichheit, Methodenschreibweise
+
+bool equals = rect1 == rect2;       // testet Gleichheit, Operatorenschreibweise
+
+
+int n;
+int m;
+
+bool equals = (n == m);  //  // testet Gleichheit, Operatorenschreibweise
+
+Priorität:  "Punkt-vor-Strich"
+
+int x = a + b * 3;
+
+ist gleich
+
+int x = a + (b * 3);
+
+int x = 1 - 2 - 3;   // -4 oder +2: Klammerung  // Assoziativität
+
+Stelligkeit:
+
+Überladen von Operatoren: Beispiel:  == Operator
+
+Wieviele Operanden hat der Operator?? Gibt die Stelligkeit an !
+
+Beispiel: * hat mehrere Stelligkeiten.
+
+Wie wird ein Operator überladen ???
+
+Ist wie eine Methode zu realisieren.
+
+Welchen Namen hat diese Methode:   operator ==
+
+Bemerkung:
+==========
+
+Es gibt bzfl. der Methoden-Realisierung 2 Optionen:
+
+A) In der Klasse selbst ===> Vorraussetzung: Muss Zugriff auf den Header haben.
+
+B) Außerhalb der Klasse ==> Dann, wenn der Header-File nicht geändert werden kann.
+                            Könnte sich um eine externe Zulieferung handeln.
+
+13.00 Uhr.
+
+
+
+

@@ -34,10 +34,10 @@ namespace Rectangles {
 
 
     // getter/setter
-    double Rectangle::getX() { return m_x; }
-    double Rectangle::getY() { return m_y; }
-    double Rectangle::getWidth() { return m_width; }
-    double Rectangle::getHeight() { return m_height; }
+    double Rectangle::getX() const { return m_x; }
+    double Rectangle::getY() const { return m_y; }
+    double Rectangle::getWidth() const { return m_width; }
+    double Rectangle::getHeight() const { return m_height; }
 
     void Rectangle::setX(double x)
     {
@@ -79,8 +79,16 @@ namespace Rectangles {
         //m_y = m_y + y;
     }
 
-    bool Rectangle::equals(Rectangle& other)  // Übergabe: Call-by-Referenz:
+    bool Rectangle::equals(const Rectangle& other) const  // Übergabe: Call-by-Referenz:
     {
+        double x = other.m_x;     // lesen geht !!!
+        // other.m_x = 9999;      // schreibender Zugriff: geht nicht
+
+        // m_x = 9999;            // schreibender Zugriff: ist unterbunden
+        double xx = m_x;          // lesen geht !!!
+
+        double x3 = other.getX();
+
         if (m_x != other.m_x) {
             return false;
         }
@@ -100,17 +108,50 @@ namespace Rectangles {
         return true;
     }
 
-    double Rectangle::circumference()
+
+    bool Rectangle::operator == (const Rectangle& other) const
+    {
+        if (m_x != other.m_x) {
+            return false;
+        }
+        else if (m_y != other.m_y) {
+            return false;
+        }
+        else if (m_width != other.m_width) {
+            return false;
+        }
+        else if (m_height != other.m_height) {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    double Rectangle::circumference() const
     {
         return 2.0 * (m_width + m_height);
     }
 
-    double Rectangle::area()
+    double Rectangle::area() const
     {
         return m_width * m_height;
     }
 
-    bool Rectangle::isSquare()
+    bool Rectangle::isSquare() const
     {
         bool result = (m_width == m_height);
         return result;
@@ -127,7 +168,7 @@ namespace Rectangles {
     }
 
 
-    double Rectangle::diagonal()
+    double Rectangle::diagonal() const
     {
         return std::sqrt(
             m_width * m_width + m_height * m_height

@@ -6,10 +6,11 @@
 void pointer_and_references();
 void pointer_and_references_anwendung_01();
 void pointer_and_references_02();
+void exerciseRectangle();
 
 int main()
 {
-    pointer_and_references_anwendung_01();
+    exerciseRectangle();
     return 1;
 }
 
