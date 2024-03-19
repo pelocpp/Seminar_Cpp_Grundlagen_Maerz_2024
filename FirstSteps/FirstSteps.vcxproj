@@ -140,6 +140,7 @@
   <ItemGroup>
     <ClInclude Include="..\Rectangle\Point.h" />
     <ClInclude Include="..\Rectangle\Rectangle.h" />
+    <ClInclude Include="Globals.h" />
     <ClInclude Include="Time.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

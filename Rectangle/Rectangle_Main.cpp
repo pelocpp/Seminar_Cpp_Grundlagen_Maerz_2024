@@ -140,14 +140,37 @@ static void test06_equals()
     std::cout << equals << std::endl;
 }
 
+
+
+
+static void test_rectangle_output()
+{
+    Rectangle rect(3, 3, 5, 5);
+
+
+    // Operator<<:
+    // 1. Operand:    std::cout vom Typ class std::ostream
+    // 2. Operand:                      class Rectangle
+
+    std::cout << rect << '.' << std::endl;    // fluent programming style
+
+
+    //std::cout << rect.getX() << std::endl;
+    //std::cout << rect.getY() << std::endl;
+    //std::cout << rect.getWidth() << std::endl;
+    //std::cout << rect.getHeight() << std::endl;
+}
+
+
 void exerciseRectangle()
 {
-    test01_ctors();
-    test02_methods();
-    test03_center();
-    test04_move();
-    test05_intersection();
-    test06_equals();
+    //test01_ctors();
+    //test02_methods();
+    //test03_center();
+    //test04_move();
+    //test05_intersection();
+    //test06_equals();
+    test_rectangle_output();
 }
 
 // ===========================================================================

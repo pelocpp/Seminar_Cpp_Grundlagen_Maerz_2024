@@ -12,6 +12,8 @@ class Rectangle
 {
     friend bool operator == (const Rectangle&, const Rectangle&);
 
+    friend std::ostream& operator << (std::ostream&, const Rectangle&);
+
 private:
     double m_x;
     double m_y;
@@ -59,7 +61,14 @@ public:
 // =======================================================
 
 
+// output:  left-shift operators
+// global function declaration
 
+// Überflüssig, wenn DIESE Signatur als friend in Erscheinung tritt
+//std::ostream& operator << (std::ostream& os, const Rectangle& other);
+
+
+// =======================================================
 
 
 // ===============================================================================

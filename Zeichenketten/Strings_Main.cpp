@@ -141,6 +141,13 @@ void testDateToWord()
 
     // test 'dateToWord'
     std::string s = dateToWord("12.08.2000");
+
+    std::string input;
+
+    std::cin >> input;  // Blockade: Eingabe in der Konsole , Enter quittieren
+    
+    // Idee:
+    // Operator <<  ähnlich zu einem PFEIL aussieht:  <====
     std::cout << s << std::endl;
 
     s = dateToWord("01.13.2023");

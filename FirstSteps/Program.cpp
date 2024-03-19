@@ -12,9 +12,14 @@ void testZeichenketten();
 void testString();
 void testDateToWord();
 
+
+// 
+int g_globalValue = 123;   // globale Variable DEFINIERT (Vorbelegungswert)
+
+
 int main()
 {
-    testDateToWord();
+    exerciseRectangle();
     return 1;
 }
 

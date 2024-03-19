@@ -221,6 +221,36 @@ void Rectangle::print()
         << ", IsSquare=" << isSquare() << ']' << std::endl;
 }
 
+
+// =============================================================
+
+// globale Funktionen mit der Klasse Rectangle
+
+// output
+// A) public interface of class Rectangle
+//std::ostream& operator << (std::ostream& os, const Rectangle& rect)
+//{
+//    os << "X: " << rect.getX() << "," << std::endl;
+//    os << "Y: " << rect.getY() << "," << std::endl;
+//    os << "Width: " << rect.getWidth() << "," << std::endl;
+//    os << "Height: " << rect.getHeight() << std::endl;
+//
+//    return os;
+//}
+
+
+// B) private interface of class Rectangle
+std::ostream& operator << (std::ostream& os, const Rectangle& rect)
+{
+    os << "X: " << rect.m_x << "," << std::endl;
+    os << "Y: " << rect.m_y << "," << std::endl;
+    os << "Width: " << rect.m_width << "," << std::endl;
+    os << "Height: " << rect.m_height << std::endl;
+
+    return os;
+}
+
+
 // ===========================================================================
 // End-of-File
 // ===========================================================================

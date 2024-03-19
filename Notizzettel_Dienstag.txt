@@ -195,3 +195,39 @@ void testZeichenketten()
 
 std::string 
 
+============================================================
+
+C++:  Ausgabe:  operator << ist zu realisieren.
+
+
+
+Etwas schwache Analogie:
+
+C#: class Object ====> toString   (Vererbung)
+
+============================================================
+
+Frage:
+
+Warum geht das mit "über Dateigrenzen benutzen Variablen, Klassen, Structs" so
+einfach und in C++ so anders ???
+
+Achtung:
+
+C++ setzt eine 1-Pass Übersetzung zu Grunde.
+
+C# hat - per Definition - eine 2-Pass Übersetzung.
+
+    Jede Datei wird 2-Mal gelesen.
+
+
+============================================================
+
+In C++ gibt es KEINEn GC // Garbage Collector.
+
+
+Intelligenten Zeiger: Smart Pointer:  std::shared_ptr:  ÄHNLICHKEITEN mit dem Prinzip des Garbage Collectors.
+
+
+
+

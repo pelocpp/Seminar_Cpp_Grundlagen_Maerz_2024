@@ -1,9 +1,16 @@
 #include <iostream>
 #include <string>
 
+#include "Globals.h"
+
+// extern int g_globalValue;   // Bekanntmachung
+
+// extern int g_globalValue;   // globale Variable DEFINIERT (Vorbelegungswert)
 
 void testChar()
 {
+    g_globalValue = 456;  // int  // Bestätigung
+
     char ch;
     int n;
 
