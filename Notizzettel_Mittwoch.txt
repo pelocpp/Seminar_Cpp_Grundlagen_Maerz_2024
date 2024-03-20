@@ -206,3 +206,115 @@ array1:  len = 3
 array2:  len = 3
          data = aa0
 
+// ====================================================
+
+Microsoft Technologie: COM  // Component Objekt Model
+
+C++ Realisierung  // Rein Interface getrieben ...
+
+// ==========================================
+
+    class IAccount
+    {
+    public:
+        // getter/setter
+        virtual double getAccountNumber() const = 0;
+    };
+
+
+Was ist dieses "= 0";   pure virtual function
+
+Methode OHNE Realiserung.
+
+Idee von "= 0":
+
+Klassen mit virtuellen Methoden haben eine "vtable":
+
+Wie geht Polymorphismus ???
+
+Wie funktioniert der virtuelle Methodenaufrufmechanismus?
+
+Trick:  Neben der Klasse gibt es zur Laufzeit eine Tabelle pro Klasse
+        mit Adressen der Methoden DIESER Klasse.
+
+        Vererbung: In dieser Tabelle wird die Adresse der Methode aus der 
+                   Basisklasse umkopiert / übernommen.
+
+        Wird die Methode überschrieben:
+        Dann wird in dieser Tabelle die Adresse der neuen Methode reinkopiert.
+
+
+Idee von "= 0": In der vtable steht an dieser Stell "0" // Null-Zeiger drin.
+
+
+Ein Interface wird "vererbt" - bedeutet aber eher Arbeit,
+denn ich muss die Methoden des Interface implementieren.
+
+Hinweis:
+Vorteile bezüglich der Verwendung von override
+Hätten wir einen der folgenden Fehler gemacht, würde uns der Übersetzer bei Verwendung von override nun neuerdings darauf aufmerksam machen:
+
+In Klasse Derived: void fumc(int) override; - Tippfehler im Namen der Funktion
+In Klasse Derived: void func(long) override; - Fehler bei einem Formalparametertyp
+In Klasse Base: void func(int); - Schlüsselwort virtual in Klasse Base vergessen
+
+
+=========================================================
+
+::   Heißt Scope Operator
+
+=========================================================
+
+C++:
+
+= OO - Programmierung
+= Generische Programmierung
+
+
+C++:                       Bjarne Stroustrup
+
+Generische Programmierung: Alexander Stepanow
+
+
+C++ ==> Bibliothek ==> Alexander Stepanow ergänzt um die Generische Programmierung
+
+
+Java: Templates
+C#:   Generics
+
+Siehe Abbildung in
+
+https://github.com/pelocpp/cpp_modern/blob/master/GeneralSnippets/TemplateClassBasics/TemplatesClassBasics.md
+
+
+3 - Ebenen - Modell:
+
+Schablone / TEMPLATE
+
+====> wird mit einem Datentyp instanziiert:  KLASSE
+
+Eine Klasse wird ebenfalls instanziiert:  OBJEKT
+
+//=============================================
+
+Ganzzahlige Division:
+
+4 / 8  =============>  0.5  ist falsch
+
+5 / 8  =============>  0
+
+Runden ??????????
+
+Ganzzahlige Division ist mit Abschneiden (to truncate)
+
+Taschenrechner mit Runden.
+
+
+Technik in der Generische Programmierung:  Template Spezialisierung
+
+Für Speziallfälle des Typnamens T können wir separate Realisierungen schreiben
+
+============================================================
+
+Morgen:   ==>  STL
+

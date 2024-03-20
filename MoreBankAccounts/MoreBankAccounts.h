@@ -7,6 +7,7 @@
 namespace MoreBankAccounts {
 
     // Interface 'IAccount'
+    // Basiert auf einem Regelwerk
     class IAccount
     {
     public:
@@ -23,6 +24,7 @@ namespace MoreBankAccounts {
     // ===========================================================================
 
     // Abstract Base Class 'Account'
+    // Unvollständige Klasse
     class Account : public IAccount
     {
     protected:
@@ -46,6 +48,7 @@ namespace MoreBankAccounts {
             return m_number;
         }
 
+
         double getBalance() const final override {
             return m_balance; 
         }
@@ -61,10 +64,15 @@ namespace MoreBankAccounts {
         }
     };
 
+    void testMain() {
+
+       //Account acc;
+    }
+
     // ===========================================================================
 
     // Concrete Class 'CurrentAccount'
-    class CurrentAccount : public Account
+    class CurrentAccount final : public Account
     {
     private:
         double m_limit;
@@ -147,6 +155,8 @@ namespace MoreBankAccounts {
             std::cout << "    InterestRate = " << m_rate << ";" << std::endl;
         }
     };
+
+   // class MyDepositAccount : public DepositAccount{};
 
     // ===========================================================================
 

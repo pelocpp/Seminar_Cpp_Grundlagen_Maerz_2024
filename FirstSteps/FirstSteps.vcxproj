@@ -138,6 +138,7 @@
     <ClCompile Include="DynamicMemory.cpp" />
     <ClCompile Include="Program.cpp" />
     <ClCompile Include="Pointer_and_References.cpp" />
+    <ClCompile Include="Schablonen.cpp" />
     <ClCompile Include="Time.cpp" />
     <ClCompile Include="Zeichen.cpp" />
   </ItemGroup>

@@ -48,12 +48,15 @@ static void testMoreBankAccounts_02()
     da.deposit(200);
     da.print();
 
+    // Polymorphismus -  [ Value-based // Reference/Pointer-based ]
     IAccount* accounts[3]{ &ca, &sa, &da };
 
     double totalBalance = 0;
     for (int i = 0; i < 3; ++i) {
 
         totalBalance += accounts[i]->getBalance();
+
+        accounts[i]->withdraw(50);
     }
 
     std::cout << "Total Balance: " << totalBalance << std::endl;

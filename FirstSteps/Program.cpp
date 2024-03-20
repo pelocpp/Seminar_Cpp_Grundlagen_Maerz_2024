@@ -13,6 +13,7 @@ void testString();
 void testDateToWord();
 void testDynamicMemoryManagement();
 void exerciseDynamicArray();
+void testSchablonen();
 
 
 // 
@@ -21,7 +22,7 @@ int g_globalValue = 123;   // globale Variable DEFINIERT (Vorbelegungswert)
 
 int main()
 {
-    exerciseDynamicArray();
+    testSchablonen();
     return 1;
 }
 
