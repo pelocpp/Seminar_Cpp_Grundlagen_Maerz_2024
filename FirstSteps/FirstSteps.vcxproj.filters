@@ -25,6 +25,9 @@
     <Filter Include="Source Files\DynamicArray">
       <UniqueIdentifier>{3e743012-7e0b-42e7-b219-66f5f6249829}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\MoreBankAccounts">
+      <UniqueIdentifier>{62ffe154-faa2-42c9-b9e5-bf97b1565513}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Program.cpp">
@@ -63,6 +66,9 @@
     <ClCompile Include="..\DynamicArray\DynamicArray_Main.cpp">
       <Filter>Source Files\DynamicArray</Filter>
     </ClCompile>
+    <ClCompile Include="..\MoreBankAccounts\MoreBankAccounts_Main.cpp">
+      <Filter>Source Files\MoreBankAccounts</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Time.h">
@@ -79,6 +85,9 @@
     </ClInclude>
     <ClInclude Include="..\DynamicArray\DynamicArray.h">
       <Filter>Source Files\DynamicArray</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MoreBankAccounts\MoreBankAccounts.h">
+      <Filter>Source Files\MoreBankAccounts</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
