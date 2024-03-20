@@ -127,6 +127,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\DynamicArray\DynamicArray.cpp" />
+    <ClCompile Include="..\DynamicArray\DynamicArray_Main.cpp" />
     <ClCompile Include="..\Rectangle\Point.cpp" />
     <ClCompile Include="..\Rectangle\Rectangle.cpp" />
     <ClCompile Include="..\Rectangle\Rectangle_Main.cpp" />
@@ -139,6 +141,7 @@
     <ClCompile Include="Zeichen.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\DynamicArray\DynamicArray.h" />
     <ClInclude Include="..\Rectangle\Point.h" />
     <ClInclude Include="..\Rectangle\Rectangle.h" />
     <ClInclude Include="Globals.h" />

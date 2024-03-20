@@ -46,8 +46,30 @@ Value-Semantik      Zugriff:  Punkt-Operator .
 
 Pointer-Semantik    Zugriff:  Punkt-Operator ->
 
+// ==========================================
+
+Geht eine Wertzuweisung von Objekten in C++:
+
+C#: 
+
+    DynamicArray array1 = new DynamicArray(3);
+    array1.fill(10);
+    array1.print();
+
+    DynamicArray array2 = new DynamicArray(3);
+    array2.fill(20);
+    array2.print();
+
+    // Wertzuweisung von Objekten // Wertzuweisung von Referenzen
+    array1 = array2;
+
+    // Kopierkontruktor:
+    // Keine wirkliche Analogie zu C#
+    // kopieren in C#: interface ICloneable
+
 
 // ==========================================
+
 
 C#:
 
@@ -111,4 +133,79 @@ int numbers[n];   // dynamisch
 Geht in C++ nicht:
 
 int numbers[10];   // konstant
+
+=======================================================
+
+Übung:
+
+DynamicArray
+
+DynamicArray array (100);
+
+....
+
+Länge 10
+
+array.resize (50);
+
+// oder
+
+array.resize (200);
+
+
+------------------------------------------------
+
+100 auf 90 oder 80 runtergehen .... % Werte
+
+
+alloc // new : Speicher anlegen
+
+realloc ( aktuellenZeiger, neue Länge  )
+
+------------------------------------------------
+
+Geht das auch einfacher ??????????????????
+
+Ja:
+
+Wie:
+
+Indem ich vorgefertige Klassen aus der Standard Bibliothek (STL) verwende.
+
+------------------------------------------------
+
+Fragmentierung in C++ und C#:
+
+Freispeicherbereiche gibt es mehrere:
+
+Arena // Arenen
+
+Wie geht das in C#:
+
+a) Ich habe Referenzen
+
+b) GC - Garbage Collection
+
+c) Wie erfolgt die Freigabe?? Wie in C++
+
+d) Dann ginge die Defragmentierung NICHT !!!
+
+Truth in C#:
+
+Eine Referenz in C# ist ein DOPPELTER ZEIGER.
+
+DOPPELTE INDIREKTION.
+
+// ====================================================
+
+Beispiel einer Ausführung einer Wertzuweisung:
+
+array1:  len = 3
+         data = d70 // aa0
+
+array2:  len = 3
+         data = aa0
+
+
+         15:20
 
