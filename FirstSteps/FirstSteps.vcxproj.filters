@@ -51,6 +51,9 @@
     <ClCompile Include="..\Zeichenketten\Strings_Main.cpp">
       <Filter>Source Files\Zeichenketten</Filter>
     </ClCompile>
+    <ClCompile Include="DynamicMemory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Time.h">

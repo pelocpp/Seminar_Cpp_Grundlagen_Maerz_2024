@@ -1,0 +1,114 @@
+==============
+
+C++ Grundlagen
+
+Guten Morgen
+
+Mittwoch
+
+Peter Loos 
+
+https://github.com/pelocpp
+
+// ==========================================
+
+Dynamische Speicherverwaltung:
+
+A)  new, delete
+
+
+B) “Rule of Three”: Kopierkonstruktor, Wertzuweisungsoperator und Destruktor
+
+
+// ==========================================
+
+int* pArray = new int[10];
+
+-------------------------------------
+C#:
+int[] numbers = new int[10];
+
+Feature: numbers.length ==> Länge 
+-------------------------------------
+
+
+// ==========================================
+
+C++ ist eine Sprache mit
+
+Value-Semantik    (statisch, Stack)
+
+Pointer-Semantik  (dynamisch, Halde)
+
+Syntax:
+
+Value-Semantik      Zugriff:  Punkt-Operator .
+
+Pointer-Semantik    Zugriff:  Punkt-Operator ->
+
+
+// ==========================================
+
+C#:
+
+Classes are reference types, allocated on the heap and garbage-collected.
+
+Structs are value types allocated on the stack.
+
+Size, Point, struct (Value), int, double
+
+----------------------
+
+C++:
+
+Classes are either pointer types or value types.
+
+Pointer types are allocated on the heap and released with delete.
+
+Value types are allocated on the stack and released, when the function goes out of scope.
+
+// ==========================================
+
+
+
+Wann Referenzen
+
+Wann Pointer
+
+=============================================
+
+Hinweis:
+
+Die Schreibweise
+
+pArray[index]
+
+wird abgebildet auf
+
+*(pArray + index)
+
+=======================================================
+
+new, delete
+
+Interessanter:
+
+class Container
+
+  == Daten
+  == dynamisch (new, delete)
+
+=======================================================
+
+C#:
+
+int n;
+
+...
+
+int numbers[n];   // dynamisch
+
+Geht in C++ nicht:
+
+int numbers[10];   // konstant
+

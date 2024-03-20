@@ -132,6 +132,7 @@
     <ClCompile Include="..\Rectangle\Rectangle_Main.cpp" />
     <ClCompile Include="..\References_Pointers\References_Pointers_Main.cpp" />
     <ClCompile Include="..\Zeichenketten\Strings_Main.cpp" />
+    <ClCompile Include="DynamicMemory.cpp" />
     <ClCompile Include="Program.cpp" />
     <ClCompile Include="Pointer_and_References.cpp" />
     <ClCompile Include="Time.cpp" />

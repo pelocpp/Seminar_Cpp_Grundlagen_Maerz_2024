@@ -11,6 +11,7 @@ void testChar();
 void testZeichenketten();
 void testString();
 void testDateToWord();
+void testDynamicMemoryManagement();
 
 
 // 
@@ -19,7 +20,7 @@ int g_globalValue = 123;   // globale Variable DEFINIERT (Vorbelegungswert)
 
 int main()
 {
-    exerciseRectangle();
+    testDynamicMemoryManagement();
     return 1;
 }
 
