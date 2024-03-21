@@ -30,7 +30,7 @@ static void testDevilsSequence()
     std::for_each(
         devilsSequenceFolge.begin(),
         devilsSequenceFolge.end(),
-        printToConsole
+        printToConsole  // hier wird nur die ADRESSE der Methode übergeben
     );
 }
 
@@ -105,8 +105,8 @@ static void testFibonacci()
 
 void exerciseSTL()
 {
-    testDevilsSequence();
-    testFibonacci();
+    // testDevilsSequence();
+   testFibonacci();
 }
 
 // ===========================================================================

@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <string>
 
 void test_stl_01()
 {
@@ -180,6 +181,7 @@ void test_stl_07()
     );
 }
 
+// C - OO nicht vorhanden
 int init() {
 
    //  std::cout << "bin hier ..." << std::endl;
@@ -286,8 +288,165 @@ void test_stl_10()
         std::cout << "Nicht Gefunden:     " << std::endl;
     }
 }
+
+// Aufrufbaren Objekts
+
+// Aufsteigende Werte
+class Vorbelegen
+{
+private:
+    int m_start; 
+
+public:
+    Vorbelegen() {
+        m_start = 1;
+    }
+
+    Vorbelegen(int start) {
+        m_start = start;
+    }
+
+    void setStart(int neuerStart) {
+        m_start = neuerStart;
+    }
+
+    int getValue() {
+        m_start++;
+        return m_start;
+    }
+
+    // overloading
+    int operator() () {
+
+        m_start++;
+        std::cout << "operator() ==> " << m_start << std::endl;
+        return m_start;
+    }
+
+    int operator() (int x, int y) {
+
+        std::cout << x << ", " << y << std::endl;
+        m_start++;
+        return m_start;
+    }
+};
+
+
+// callable object 
+void test_stl_11()
+{
+
+    Vorbelegen vorbeleger(20);
+
+    int value;
+
+    value = vorbeleger(1, 2);
+    value = vorbeleger(3, 4);
+    value = vorbeleger(5, 6);
+
+    //value = vorbeleger.getValue();
+    //value = vorbeleger.getValue();
+    //value = vorbeleger.getValue();
+}
+
+void test_stl_12()
+{
+    std::vector<int> numbers;
+
+    numbers.resize(5);
+
+    Vorbelegen vorbeleger(20);
+
+    std::generate(
+        numbers.begin(),
+        numbers.end(),
+        vorbeleger
+    );
+
+    std::for_each(
+        numbers.begin(),
+        numbers.end(),
+        fun2
+    );
+
+    // =============
+
+    vorbeleger.setStart(100);
+
+    std::generate(
+        numbers.begin(),
+        numbers.end(),
+        vorbeleger
+    );
+
+    std::for_each(
+        numbers.begin(),
+        numbers.end(),
+        fun2
+    );
+
+    // =============
+
+    std::generate(
+        numbers.begin(),
+        numbers.end(),
+        Vorbelegen (200)
+    );
+
+    std::for_each(
+        numbers.begin(),
+        numbers.end(),
+        fun2
+    );
+}
+
+// ======================================================
+
+
+std::string convert (int elem)
+{
+    std::string s;
+
+    s = std::to_string(elem);
+
+    return s;
+}
+
+void test_stl_13()
+{
+    std::vector<int> numbers{ 11, 12, 13, 14, 15 };
+
+    std::for_each(
+        numbers.begin(),
+        numbers.end(),
+        fun2
+    );
+
+    // Für eine Oberfläche
+
+    std::vector<std::string> numbersDisplay;
+
+    //numbersDisplay.resize(numbers.size());
+
+    //std::transform(
+    //    numbers.begin(),
+    //    numbers.end(),
+    //    numbersDisplay.begin(),
+    //    convert
+    //);
+
+    // ODER
+
+    std::transform(
+        numbers.begin(),
+        numbers.end(),
+        std::back_inserter (numbersDisplay),
+        convert
+    );
+}
+
 void test_stl()
 {
-    test_stl_10();
+    test_stl_13();
 }
 

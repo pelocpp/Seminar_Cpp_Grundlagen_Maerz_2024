@@ -1,4 +1,5 @@
 #include <iostream>  // STL Standard Template Library
+#include <random>  // STL Standard Template Library
 
 
 #include "Time.h"
@@ -20,10 +21,12 @@ void exerciseSTL();
 // 
 int g_globalValue = 123;   // globale Variable DEFINIERT (Vorbelegungswert)
 
+std::default_random_engine           m_random_engine;
+std::uniform_int_distribution<int>   m_dist;
 
 int main()
 {
-    exerciseSTL();
+    test_stl();
     return 1;
 }
 

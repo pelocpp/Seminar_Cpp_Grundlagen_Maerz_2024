@@ -291,3 +291,130 @@ std::generate (
   );
 
   std::for_each ...
+
+  ==================================================
+
+  Beobachtung:
+
+
+  STL Stilistik:  == Algorithmen ......
+                  == Container ... Hash Tabelle 
+
+  Programming in Building Blocks:
+
+    std::vector<int> sequence(20);
+
+    std::generate(
+        sequence.begin(),
+        sequence.end(),
+        fibonacciCalc
+    );
+
+    std::for_each(
+        sequence.begin(),
+        sequence.end(),
+        fibonacciOut
+    );
+
+
+// DRY    Don't reinvent the Wheel
+
+// =================================================
+
+Aufrufbare Objekt // Callable Object  // Funktor  // Functor
+
+==========================================================
+
+
+std::transform
+
+Container mit int-Werten
+
+Container mit std::string-Werten
+
+std::transform:
+
+Agiert auf dem Zielcontainer mit dem Operator[].
+
+Ausgangscontainer: 
+
+    std::vector<int> numbers{ 11, 12, 13, 14, 15 };
+
+numbersDisplay[0]
+numbersDisplay[1]
+numbersDisplay[2]
+numbersDisplay[3]
+numbersDisplay[4]
+
+Alternative: Man kann in den Zielcontainer auch mit push_back schreiben.
+
+Dazu muss man einen Adapter verwenden.
+
+===========================================================
+
+Übung:
+
+Wir gehen zur Lotto- Ziehung
+
+Ziehung der Lotto-Zahlen:
+
+= Klasse Lotto
+
+  = Instanz-Variablen: std::vector für die Zahlen (am Anfang leer)
+  = getter: "wieviele Zahlen wurden schon gezogen"
+
+
+= Methode
+
+  int nextNumber();   // Zufallszahlen Generator
+ 
+  Bestimmt nächste gezogene Zufallszahl.
+
+  Zufallszahlen:
+
+  A) #include <random>
+
+  B) Zwei Objekte - als Instanzvariablen:
+
+    std::default_random_engine           m_random_engine;
+    std::uniform_int_distribution<int>   m_dist;
+
+  C) Sind über die Konstruktoren vorzubelegen:
+
+    Lotto() : m_random_engine(0), m_dist(1, 49)  {}
+    
+    Lotto(int seed) : m_random_engine(seed), m_dist(1, 49)  {}
+
+    Seed-Value: Seed: Samen
+
+  D) Wie wird eine Zahl erzeugt:
+
+    int nextNumber()
+    {
+        int number = m_dist(m_random_engine);
+        return number;
+    }
+
+
+= Methode
+
+  bool numberExists(int zahl)
+ 
+  Ist die von nextNumber() ermittelte Zahl schon gezogen worden?
+
+  Dazu muss ich im Container der gezogenen Zahlen nachsehen:
+
+  Anwendung von std::find_if
+
+
+=  Methode  void zahlEinfuegen(int zahl)
+
+   Fügt Zahl in  std::vector ein - mit push_back
+
+=  Methode void play()
+
+   Ziehung von 6 Lottozahlen.
+
+
+= Ausgabe der Zahlen:  std::for_each
+
