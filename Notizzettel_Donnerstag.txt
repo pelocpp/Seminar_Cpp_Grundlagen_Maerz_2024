@@ -1,0 +1,293 @@
+==============
+
+C++ Grundlagen
+
+Guten Morgen
+
+Donnerstag
+
+Peter Loos 
+
+https://github.com/pelocpp
+
+// ==========================================
+
+Freitag - 13.00 bis 13.30 - Telko
+
+Freitag:  Workshop
+
+============================================================
+
+= Container              Vector List Queue Stack  
+= Iteratoren             IEnumarable, IEnumerator ...
+= Algorithmen            Einfache Funktionen für Container / Suchen , Kopieren, 
+= Aufrufbare Objekte     Leichter Touch zu Lambdas ...
+
+Manche Konzepte: Vielleicht etwas 'eigen'
+
+============================================================
+
+Container:
+
+std::vector<T>:
+
+Ein flexibel langes Feld
+
+Sehr, sehr ähnlich zur Klasse DynamicArray (ohne Bibliothek)
+
+Unterschied: Hat keine fixe Länge, sondern ist zu Beginn leer.
+
+Mit push_back kann der Container gefüllt werden.
+
+Aber:
+
+Es wird NICHT pro push_back jedesmal neuer Speicher allokiert und umkopiert.
+
+Optimierung: Es wird ab einem bestimmten Umfang MEHR Speicher allokiert
+             als tatsächlich benötigt wird.
+
+Zwei Längenangaben:
+
+a) Size:     Anzahl der vom Anwender hinzugefügten Elemente.
+
+b) Capacity:   Platz im Container - kann größer als die Size sein.
+
+Beispiel:  Size: 10, Capacity: 15
+
+13, 19, 28, 42, 63, 94
+
+Höhere Mathematik:
+
+neuer_wert = alter_wert * 1.5;
+
+==================================================
+
+Was ist das Ziel der STL:
+
+== Reihe von Containern
+
+== Alle Container lassen sich traversieren (durchlaufen)
+   auf eine homogene Art und Weise // transparente Art und Weise:
+
+   Dieser Vorgang ist - konzeptionell - für alle Container gleich.
+
+Lösung: Konzept der Iteratoren.
+
+================================================================
+
+Problem des Beispiels:
+
+int n = numbers[i];
+
+Weitere Beispiel für Container:
+
+== Verkettete Liste:   std::forward_list   // Linked List
+== Balanzierten Baum:  std::map
+== Hash-Tabelle:       std::unordered_map
+
+
+Linked List: Nicht die geringste Ahnung, welche Menge an Daten
+             ist zu verarbeiten.
+
+Einfügen in der Mitte: Extrem performant.
+
+Beobachtung: Eine Linked List kann nicht mit dem Operator[]
+             bearbeite werden.
+
+             list[3]: NEIN ...
+
+
+Balanzierten Baum: Das Suchen performant.
+
+std::map tree;
+
+int n = tree[4];   // NEIN - geht nicht - auch nicht mit Gewalt
+
+
+=============================================================
+
+Konzept der Iteratoren:
+
+== Was beschreibt ein Iterator: 
+
+    Eine Position in einem Container (Objekt eines Iterators).
+
+== Was ist ein Iterator:  Eine C++ Klasse.
+
+== Konsequenz des transparenten Ansatzes:
+
+Jeder Container der STL hat eine eigene, zugeordnete Iteratoren-Klasse.
+
+Die Iteratoren-Klasse ist im Container definiert.
+
+== Wie kann man die Betrachtung dieser vielen Klassen umgehen:
+
+Regelwerk für Iteratoren:
+-------------------------
+
+4 Operatoren an einem Iterator:
+
+operator*    Dereferenzieren: Gib mit den Wert an der Position des
+                              Iterators aus dem Container.
+
+operator++:  Gehe zur nächsten Position
+
+operator==:  Vergleich zweier Iteratoren
+operator!=:
+
+
+operator[](index n):  Greift auf den Container an der Stelle n zu.
+
+   Vorsicht: Geht nur bei "Random-Access" Containern. 
+
+
+
+
+Regelwerk für Container:
+-----------------------
+
+Es gibt zwei Methoden mit einem vordefinierten Namen:
+
+begin:   Liefert die Position des ersten Elements im Container zurück.
+end:     Liefert die Position des letzten Elements im Container zurück
+         (genauer: Position NACH dem letzten Element)
+
+
+--------------------------------------------------------------
+
+20 verschiedene Klassen ===> vereinheitlichen: Namensgebung.
+
+
+Beispiel: 
+
+std::vector<int>
+
+Iteratoren-Klasse:
+
+using iterator = _Vector_iterator<_Scary_val>;
+
+// typedef  _Vector_iterator<_Scary_val> iterator;
+
+--------------------------------------------------------------
+
+Iteratoren stellen den Zugriff auf Container her.
+
+Manches ließe sich vereinfachen, wenn "kleine" Hilfsfunktionen vorhanden wären.
+
+===> "kleine" Hilfsfunktionen  :  STL Algorithmen
+
+===============================================================
+
+Vergleich:
+---------
+
+void fun1(const int& n)
+{
+    int m;
+
+    m = n;
+
+    std::cout << "Value: " << n << std::endl;
+}
+
+    m = n;
+00007FF60F2D56FF  mov         rax,qword ptr [n]  
+00007FF60F2D5706  mov         eax,dword ptr [rax]  
+00007FF60F2D5708  mov         dword ptr [m],eax  
+
+----------------------------------------------------------------
+
+versus:
+
+void fun2(int n)
+{
+    int m;
+
+    m = n;
+
+    std::cout << "Value: " << n << std::endl;
+}
+
+    m = n;
+00007FF79E1347AE  mov         eax,dword ptr [n]  
+00007FF79E1347B4  mov         dword ptr [m],eax  
+
+Fazit:
+
+Wann verwende ich Referenzen / Alias-Namen: Bei OBJEKTEN 
+
+Bei elementaren Variablen (int, double) ist eine Kopie effizienter.
+
+==============================================================
+
+Die STL ist performant.
+
+std::fill
+
+mov ===> rep prefix 
+
+
+
+===================================================================
+
+2 Übungen
+
+== Aufrufbaren Objekte
+
+Übung
+
+Teuflische Zahlenfolge   // Collatz
+
+
+Startwert n:
+
+n gerade:   n / 2
+n ungerade: 3 * n + 1
+
+
+int n;
+...
+if (n % 2 == 0) {
+   // gerade
+}
+
+if (n % 2 == 1) {
+   // ungerade
+}
+
+Beispiel:
+
+7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1:   Abbruch / Ende.
+
+
+Aussage: Für alle n:   Endet die Folge nach ENDLICH vielen Schritten.
+
+Bis heute lässt sich diese einfache Erkenntnis NICHT beweisen.
+
+
+int n = 7;
+
+std::cin >> n;
+
+
+std::generate    ==> 3 Parameter:  Funktion, die einen Container befüllt
+
+2, 4, 6, 8, ..............
+
+=====================
+
+Fibonacci:
+
+Wunsch: std::vector, std::generate ( mit static Variablen )
+
+std::vector<int> numbers;
+
+numbers.resize (20);   // 20 Plätze - 0  <======== Achtung
+
+std::generate (
+  numbers.begin(),
+  numbers.end(),
+  fibuFunction
+  );
+
+  std::for_each ...

@@ -316,5 +316,3 @@ Für Speziallfälle des Typnamens T können wir separate Realisierungen schreiben
 
 ============================================================
 
-Morgen:   ==>  STL
-

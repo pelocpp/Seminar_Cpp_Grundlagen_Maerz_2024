@@ -72,6 +72,9 @@
     <ClCompile Include="Schablonen.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="STL_Basics.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Time.h">
