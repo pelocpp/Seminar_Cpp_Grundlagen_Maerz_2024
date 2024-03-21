@@ -31,6 +31,9 @@
     <Filter Include="Source Files\STL_Exercise">
       <UniqueIdentifier>{0a42729c-5e94-47e6-974c-63ea5e19f23c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\LottoZiehung">
+      <UniqueIdentifier>{284bc04b-6e39-44e3-9efe-0b41a731eccc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Program.cpp">
@@ -81,6 +84,9 @@
     <ClCompile Include="..\STL\STL_Main.cpp">
       <Filter>Source Files\STL_Exercise</Filter>
     </ClCompile>
+    <ClCompile Include="..\LottoZiehung\Lotto.cpp">
+      <Filter>Source Files\LottoZiehung</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Time.h">
@@ -100,6 +106,9 @@
     </ClInclude>
     <ClInclude Include="..\MoreBankAccounts\MoreBankAccounts.h">
       <Filter>Source Files\MoreBankAccounts</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LottoZiehung\Lotto.h">
+      <Filter>Source Files\LottoZiehung</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
