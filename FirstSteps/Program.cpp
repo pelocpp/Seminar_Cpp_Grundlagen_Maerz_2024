@@ -15,6 +15,7 @@ void testDynamicMemoryManagement();
 void exerciseDynamicArray();
 void testSchablonen();
 void test_stl();
+void exerciseSTL();
 
 // 
 int g_globalValue = 123;   // globale Variable DEFINIERT (Vorbelegungswert)
@@ -22,7 +23,7 @@ int g_globalValue = 123;   // globale Variable DEFINIERT (Vorbelegungswert)
 
 int main()
 {
-    test_stl();
+    exerciseSTL();
     return 1;
 }
 

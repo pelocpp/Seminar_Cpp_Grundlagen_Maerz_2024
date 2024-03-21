@@ -28,6 +28,9 @@
     <Filter Include="Source Files\MoreBankAccounts">
       <UniqueIdentifier>{62ffe154-faa2-42c9-b9e5-bf97b1565513}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\STL_Exercise">
+      <UniqueIdentifier>{0a42729c-5e94-47e6-974c-63ea5e19f23c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Program.cpp">
@@ -74,6 +77,9 @@
     </ClCompile>
     <ClCompile Include="STL_Basics.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\STL\STL_Main.cpp">
+      <Filter>Source Files\STL_Exercise</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -135,6 +135,7 @@
     <ClCompile Include="..\Rectangle\Rectangle.cpp" />
     <ClCompile Include="..\Rectangle\Rectangle_Main.cpp" />
     <ClCompile Include="..\References_Pointers\References_Pointers_Main.cpp" />
+    <ClCompile Include="..\STL\STL_Main.cpp" />
     <ClCompile Include="..\Zeichenketten\Strings_Main.cpp" />
     <ClCompile Include="DynamicMemory.cpp" />
     <ClCompile Include="Program.cpp" />
