@@ -24,7 +24,7 @@ bool Lotto::numberExists(int zahl)
         zahl
     );
 
-    return pos != m_numbers.end();
+    return pos != m_numbers.end();  // vergleicht Iteratoren 
 };
 
 void Lotto::addNumber(int zahl)
@@ -93,4 +93,3 @@ void main_lotto()
     lotto.play();
     lotto.print();
 }
-

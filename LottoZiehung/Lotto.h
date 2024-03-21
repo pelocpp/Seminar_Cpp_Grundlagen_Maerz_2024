@@ -22,8 +22,9 @@ public:
     int nextNumber();
     void addNumber(int zahl);
     void play();
-    static void ausgabe(int number);
     void print();
+
+    static void ausgabe(int number);
 
 private:
     bool numberExists(int zahl);
