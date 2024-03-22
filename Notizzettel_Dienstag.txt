@@ -6,7 +6,9 @@ Guten Morgen
 
 Dienstag
 
-Peter Loos 
+Peter Loos
+
+peter.loos@gmx.de
 
 https://github.com/pelocpp
 

@@ -1,0 +1,15 @@
+==============
+
+C++ Grundlagen
+
+Guten Morgen
+
+Freitag
+
+Peter Loos
+
+peter.loos@gmx.de
+
+https://github.com/pelocpp
+
+==============

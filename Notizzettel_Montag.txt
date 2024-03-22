@@ -4,7 +4,9 @@ C++ Grundlagen
 
 Guten Morgen
 
-Peter Loos   // Du
+Peter Loos
+
+peter.loos@gmx.de
 
 https://github.com/pelocpp
 
