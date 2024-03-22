@@ -6,6 +6,34 @@
 #include <utility>
 #include <algorithm>
 
+// -------------------------------------------------------------------------------
+
+bool PhoneBookMap::search(const std::string& first, const std::string& last, size_t& number)
+{
+    std::string key = first + "_" + last;
+
+    std::unordered_map <std::string, size_t>::iterator pos = m_map.find(key);
+
+    if (pos == m_map.end()) {
+
+        std::cout << first << " " << last << " not found!" << std::endl;
+
+        return false;
+    }
+    else {
+
+        std::pair<std::string, size_t> result = *pos;
+
+        number = result.second;
+    
+        std::cout << first << " " << last << " has number " << number << std::endl;
+
+        return true;
+    }
+}
+
+// -------------------------------------------------------------------------------
+
 bool PhoneBookMap::insert(const std::string& first, const std::string& last, size_t number)
 {
     // "Hans", "Mueller" ==> Key: "Hans"_"Mueller"
@@ -21,6 +49,7 @@ bool PhoneBookMap::insert(const std::string& first, const std::string& last, siz
     return true; // siehe Zeile zuvor
 }
 
+// -------------------------------------------------------------------------------
 
 static void printEntry(const std::pair<std::string, size_t>& entry) {
 
@@ -48,7 +77,11 @@ void PhoneBookMap::print()
     );
 }
 
+// -------------------------------------------------------------------------------
+
 size_t PhoneBookMap::size()
 {
     return m_map.size();
 }
+
+// -------------------------------------------------------------------------------

@@ -21,12 +21,35 @@ private:
         size_t m_number;
     };
 
+    class Contains
+    {
+    public:
+        Contains(const std::string& first, const std::string& last)
+            : m_first(first), m_last(last)
+        {}
 
-    std::vector <Entry> m_vec;
+        const std::string& m_first;
+        const std::string& m_last;
+
+        bool operator()(const Entry& entry) const {
+
+            return entry.m_first == m_first && entry.m_last == m_last;
+        }
+    };
+
+    std::vector<Entry> m_vec;
 
 
 public:
+    // public interface
     bool insert(const std::string& first, const std::string& last, size_t number) override;
+    bool search(const std::string& first, const std::string& last, size_t& number) override;
     void print() override;
     size_t size() override;
+
+private:
+    // private helper methods
+    bool contains(const std::string& first, const std::string& last);
+
+    static void printEntry(const Entry& entry);
 };
