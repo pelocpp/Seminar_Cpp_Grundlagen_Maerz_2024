@@ -8,6 +8,12 @@
 
 // -------------------------------------------------------------------------------
 
+PhoneBookVector::PhoneBookVector()
+{
+  //  m_vec.reserve(10000);
+}
+// -------------------------------------------------------------------------------
+
 bool PhoneBookVector::insert(const std::string& first, const std::string& last, size_t number)
 {
     if (contains(first, last)) {

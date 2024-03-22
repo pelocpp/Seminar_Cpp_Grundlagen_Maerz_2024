@@ -69,9 +69,24 @@ https://github.com/pelocpp/cpp_modern/blob/master/GeneralSnippets/CopyMoveElisio
 
 ======================================================
 
-scattered storage ==> verteilte Speicherbereiche // NICHT:  continous
+scattered storage ==> verteilte Speicherbereiche // NICHT:  continuous
 
 C++: A programmer knows what he does
 
 C#:  Robustheit
 
+======================================================
+
+Benchmark:
+
+std::string:
+
+Für "kleine" Zeichenkette ist in der Klasse std::string ein interner Puffer vorhanden:
+
+std::string ("ABC");
+
+======================================================
+
+Call-to-Action:  Man überlege sich gut, welcher Container wann einzusetzen ist.
+
+======================================================

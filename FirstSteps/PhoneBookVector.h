@@ -58,6 +58,9 @@ private:
 
 
 public:
+    PhoneBookVector();
+
+
     // public interface
     bool insert(const std::string& first, const std::string& last, size_t number) override;
     bool search(const std::string& first, const std::string& last, size_t& number) override;
