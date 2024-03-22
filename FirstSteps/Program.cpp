@@ -18,6 +18,7 @@ void testSchablonen();
 void test_stl();
 void exerciseSTL();
 void main_lotto();
+void main_phonebook();
 
 // 
 int g_globalValue = 123;   // globale Variable DEFINIERT (Vorbelegungswert)
@@ -27,7 +28,7 @@ std::uniform_int_distribution<int>   m_dist;
 
 int main()
 {
-    main_lotto();
+    main_phonebook();
     return 1;
 }
 

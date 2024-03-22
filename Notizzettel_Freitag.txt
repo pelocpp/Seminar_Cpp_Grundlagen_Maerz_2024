@@ -13,3 +13,30 @@ peter.loos@gmx.de
 https://github.com/pelocpp
 
 ==============
+
+13.00 bis 13.30
+
+16 Uhr ca.  
+
+==============
+
+STL Anwendung:
+
+Kontakte-Verwaltung // Phonebook
+
+== std::vector (Vektor)   // std::unordered_map (Hash-Tabelle)
+
+   Sequential Container   // Assoziatic-Container
+
+   Performanz-Vergleich
+
+== Aufrufbare Objekte - Lambdas 
+
+   Lambda: Aufrufbares Objekt
+
+==============
+
+Assoziatic-Container:
+
+Hash-Tabelle
+

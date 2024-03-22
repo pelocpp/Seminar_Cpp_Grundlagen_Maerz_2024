@@ -139,6 +139,9 @@
     <ClCompile Include="..\STL\STL_Main.cpp" />
     <ClCompile Include="..\Zeichenketten\Strings_Main.cpp" />
     <ClCompile Include="DynamicMemory.cpp" />
+    <ClCompile Include="PhoneBook.cpp" />
+    <ClCompile Include="PhoneBookMap.cpp" />
+    <ClCompile Include="PhoneBookVector.cpp" />
     <ClCompile Include="Program.cpp" />
     <ClCompile Include="Pointer_and_References.cpp" />
     <ClCompile Include="Schablonen.cpp" />
@@ -153,6 +156,9 @@
     <ClInclude Include="..\Rectangle\Point.h" />
     <ClInclude Include="..\Rectangle\Rectangle.h" />
     <ClInclude Include="Globals.h" />
+    <ClInclude Include="IPhoneBook.h" />
+    <ClInclude Include="PhoneBookMap.h" />
+    <ClInclude Include="PhoneBookVector.h" />
     <ClInclude Include="Time.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

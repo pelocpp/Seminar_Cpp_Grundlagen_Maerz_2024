@@ -34,6 +34,9 @@
     <Filter Include="Source Files\LottoZiehung">
       <UniqueIdentifier>{284bc04b-6e39-44e3-9efe-0b41a731eccc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\PhoneBook">
+      <UniqueIdentifier>{1a556302-f11d-49e2-b69c-0c887d74ab05}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Program.cpp">
@@ -87,6 +90,15 @@
     <ClCompile Include="..\LottoZiehung\Lotto.cpp">
       <Filter>Source Files\LottoZiehung</Filter>
     </ClCompile>
+    <ClCompile Include="PhoneBookMap.cpp">
+      <Filter>Source Files\PhoneBook</Filter>
+    </ClCompile>
+    <ClCompile Include="PhoneBook.cpp">
+      <Filter>Source Files\PhoneBook</Filter>
+    </ClCompile>
+    <ClCompile Include="PhoneBookVector.cpp">
+      <Filter>Source Files\PhoneBook</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Time.h">
@@ -109,6 +121,15 @@
     </ClInclude>
     <ClInclude Include="..\LottoZiehung\Lotto.h">
       <Filter>Source Files\LottoZiehung</Filter>
+    </ClInclude>
+    <ClInclude Include="IPhoneBook.h">
+      <Filter>Source Files\PhoneBook</Filter>
+    </ClInclude>
+    <ClInclude Include="PhoneBookVector.h">
+      <Filter>Source Files\PhoneBook</Filter>
+    </ClInclude>
+    <ClInclude Include="PhoneBookMap.h">
+      <Filter>Source Files\PhoneBook</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

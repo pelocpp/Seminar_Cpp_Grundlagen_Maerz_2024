@@ -10,8 +10,13 @@ peter.loos@gmx.de
 
 https://github.com/pelocpp
 
+https://peterloos.de/
+
 Ablauf: Unterbrecht mich // Fragen, Fragen, ...
 
+==============
+
+2. bis 5. September: Ist ein C++ Fortgeschrittenen-Seminar reserviert.
 
 ==============
 
@@ -119,9 +124,9 @@ C#:  Ab 1995
 
 C# hat manche Aspekte von C++ vereinfacht:
 
-C#:  Reference-based Language  ==> Alle Objekte liegen auf der Halde (Heap) 
+C#:  Reference-based Language (Semantik) ==> Alle Objekte liegen auf der Halde (Heap) 
 
-C++:  Value- and Reference-based Language
+C++:  Value- and Reference-based Language (Semantik)
 
 ==> Alle Objekte liegen auf dem Stack (Stapel) ODER auf der Halde (Heap) 
 
