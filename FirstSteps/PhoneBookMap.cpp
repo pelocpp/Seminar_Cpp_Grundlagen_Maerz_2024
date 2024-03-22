@@ -10,9 +10,11 @@
 
 bool PhoneBookMap::search(const std::string& first, const std::string& last, size_t& number)
 {
-    std::string key = first + "_" + last;
+    std::string key = first + "_" + last;  // build key
 
     std::unordered_map <std::string, size_t>::iterator pos = m_map.find(key);
+
+    // auto pos2 = m_map.find(key);
 
     if (pos == m_map.end()) {
 
@@ -24,12 +26,23 @@ bool PhoneBookMap::search(const std::string& first, const std::string& last, siz
 
         std::pair<std::string, size_t> result = *pos;
 
-        number = result.second;
+        number = result.second;   // rausschreiben
     
         std::cout << first << " " << last << " has number " << number << std::endl;
 
         return true;
     }
+}
+
+// -------------------------------------------------------------------------------
+
+bool PhoneBookMap::remove(const std::string& first, const std::string& last)
+{
+    std::string key = first + "_" + last;
+
+    size_t numErased = m_map.erase(key);
+
+    return (numErased == 1) ? true : false;
 }
 
 // -------------------------------------------------------------------------------

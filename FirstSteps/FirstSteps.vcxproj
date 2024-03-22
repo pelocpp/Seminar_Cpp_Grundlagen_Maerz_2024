@@ -139,6 +139,7 @@
     <ClCompile Include="..\STL\STL_Main.cpp" />
     <ClCompile Include="..\Zeichenketten\Strings_Main.cpp" />
     <ClCompile Include="DynamicMemory.cpp" />
+    <ClCompile Include="Frage.cpp" />
     <ClCompile Include="PhoneBook.cpp" />
     <ClCompile Include="PhoneBookMap.cpp" />
     <ClCompile Include="PhoneBookVector.cpp" />

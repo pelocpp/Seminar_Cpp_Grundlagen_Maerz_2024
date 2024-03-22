@@ -19,6 +19,7 @@ void test_stl();
 void exerciseSTL();
 void main_lotto();
 void main_phonebook();
+void frage();
 
 // 
 int g_globalValue = 123;   // globale Variable DEFINIERT (Vorbelegungswert)

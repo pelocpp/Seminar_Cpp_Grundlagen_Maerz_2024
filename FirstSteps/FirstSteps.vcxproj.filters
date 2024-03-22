@@ -99,6 +99,9 @@
     <ClCompile Include="PhoneBookVector.cpp">
       <Filter>Source Files\PhoneBook</Filter>
     </ClCompile>
+    <ClCompile Include="Frage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Time.h">

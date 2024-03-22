@@ -22,6 +22,8 @@ bool PhoneBookVector::insert(const std::string& first, const std::string& last, 
 
 // -------------------------------------------------------------------------------
 
+// Parameter 1 und 2:  first / last  : Input
+// Parameter 3:        number        : Output
 bool PhoneBookVector::search(const std::string& first, const std::string& last, size_t& number) {
 
     Contains cont(first, last);
@@ -42,7 +44,7 @@ bool PhoneBookVector::search(const std::string& first, const std::string& last, 
 
         const Entry& result = *pos;
 
-        number = result.m_number;
+        number = result.m_number;   // "rausschreiben"
 
         std::cout << first << " " << last << " has number " << number << std::endl;
 
@@ -51,6 +53,34 @@ bool PhoneBookVector::search(const std::string& first, const std::string& last, 
 }
 
 // -------------------------------------------------------------------------------
+
+bool PhoneBookVector::remove(const std::string& first, const std::string& last)
+{
+    Contains cont(first, last);
+
+    std::vector<Entry>::iterator pos = std::find_if(
+        m_vec.begin(),
+        m_vec.end(),
+        cont
+    );
+
+    if (pos == m_vec.end()) {
+
+        std::cout << first << " " << last << " not found!" << std::endl;
+
+        return false;
+    }
+    else {
+
+        m_vec.erase(pos);
+
+        return true;
+    }
+}
+
+// -------------------------------------------------------------------------------
+
+
 
 void PhoneBookVector::printEntry(const Entry& entry)
 {

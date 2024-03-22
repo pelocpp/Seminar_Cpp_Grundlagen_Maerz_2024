@@ -40,3 +40,38 @@ Assoziatic-Container:
 
 Hash-Tabelle
 
+======================================================
+
+Roter Faden:
+
+2 Realisierungen: 
+
+insert
+
+search
+
+remove
+
+======================================================
+
+KritiK:   RVO   NRVO
+
+Return Value Optimization
+
+Auslassen von Kopier- oder Verschiebe-Operationen
+-------------------------------------------------
+
+to elide  // Elision  ===> auslassen, weglassen
+
+===> Copy/Move Elision
+
+https://github.com/pelocpp/cpp_modern/blob/master/GeneralSnippets/CopyMoveElision/CopyMoveElision.md
+
+======================================================
+
+scattered storage ==> verteilte Speicherbereiche // NICHT:  continous
+
+C++: A programmer knows what he does
+
+C#:  Robustheit
+
